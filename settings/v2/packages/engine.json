@@ -6,7 +6,6 @@
     },
     "configs": {
       "migrationsConfig": {
-        "name": "Migrated Configuration",
         "cache": {
           "base": {
             "_value": true
@@ -24,7 +23,7 @@
             "_value": true
           },
           "skeletal-animation": {
-            "_value": true
+            "_value": false
           },
           "3d": {
             "_value": false
@@ -134,7 +133,7 @@
             "_value": true
           },
           "websocket": {
-            "_value": true
+            "_value": false
           },
           "websocket-server": {
             "_value": false
@@ -143,16 +142,16 @@
             "_value": false
           },
           "light-probe": {
-            "_value": true
+            "_value": false
           },
           "tiled-map": {
-            "_value": true
+            "_value": false
           },
           "vendor-google": {
             "_value": false
           },
           "spine": {
-            "_value": true,
+            "_value": false,
             "_option": "spine-3.8"
           },
           "spine-3.8": {
@@ -168,10 +167,10 @@
             }
           },
           "dragon-bones": {
-            "_value": true
+            "_value": false
           },
           "marionette": {
-            "_value": true
+            "_value": false
           },
           "procedural-animation": {
             "_value": false
@@ -194,32 +193,26 @@
           }
         },
         "flags": {},
+        "name": "Migrated Configuration",
         "includeModules": [
           "2d",
           "affine-transform",
           "animation",
           "audio",
           "base",
-          "dragon-bones",
           "gfx-webgl",
           "gfx-webgl2",
           "graphics",
           "intersection-2d",
           "legacy-pipeline",
-          "light-probe",
-          "marionette",
           "mask",
           "particle-2d",
           "physics-2d-builtin",
           "profiler",
           "rich-text",
-          "skeletal-animation",
-          "spine-3.8",
-          "tiled-map",
           "tween",
           "ui",
           "video",
-          "websocket",
           "webview",
           "xr"
         ],

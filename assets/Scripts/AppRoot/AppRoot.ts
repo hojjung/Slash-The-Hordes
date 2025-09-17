@@ -7,7 +7,6 @@ import { AudioPlayer } from "../Services/AudioPlayer/AudioPlayer";
 import { SaveSystem } from "./SaveSystem";
 import { ModalWindowManager } from "../Services/ModalWindowSystem/ModalWindowManager";
 import { OpenCloseAnimator } from "../Utils/OpenCloseAnimator";
-import { Analytics } from "./Analytics";
 const { ccclass, property } = _decorator;
 
 @ccclass("AppRoot")
@@ -25,7 +24,6 @@ export class AppRoot extends Component {
 
     private liveUserData: UserData;
     private gameAssets: GameAssets;
-    private analytics: Analytics;
 
     public static get Instance(): AppRoot {
         return this.instance;
@@ -63,10 +61,6 @@ export class AppRoot extends Component {
         return this.screenFader;
     }
 
-    public get Analytics(): Analytics {
-        return this.analytics;
-    }
-
     public saveUserData(): void {
         this.saveSystem.save(this.liveUserData);
     }
@@ -79,10 +73,6 @@ export class AppRoot extends Component {
         } else {
             this.node.destroy();
         }
-    }
-
-    public update(deltaTime: number): void {
-        if (this.analytics) this.analytics.update(deltaTime);
     }
 
     private async init(): Promise<void> {
