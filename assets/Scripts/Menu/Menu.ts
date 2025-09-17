@@ -32,7 +32,7 @@ export class Menu extends Component {
 
         this.menuModalLauncher = new MenuModalLauncher(AppRoot.Instance.ModalWindowManager);
 
-        this.highscoreLabel.string = `Highscore: ${Math.floor(AppRoot.Instance.LiveUserData.game.highscore)}`;
+        this.highscoreLabel.string = `최고기록: ${Math.floor(AppRoot.Instance.LiveUserData.game.highscore)}`;
 
         this.updateGoldIndicators();
     }

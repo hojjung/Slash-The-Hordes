@@ -236,8 +236,8 @@
     ],
     "value": {
       "__type__": "cc.Vec3",
-      "x": 340,
-      "y": 255,
+      "x": 255.00000000000003,
+      "y": 340.00000000000006,
       "z": 0
     }
   },
@@ -332,8 +332,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 340,
-      "y": 255,
+      "x": 254.99999999999997,
+      "y": 339.99999999999994,
       "z": 0
     },
     "_lrot": {
@@ -1443,12 +1443,12 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "3e2102a8-8c41-4066-b953-dfdcd265ae17@f9941",
+      "__uuid__": "7514891b-6705-41fd-b507-8225317b47d0@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
     "_fillType": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -1483,7 +1483,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 157.337,
+      "y": 132.276,
       "z": 0
     },
     "_lrot": {
@@ -1521,8 +1521,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 132.72,
-      "height": 26
+      "width": 136,
+      "height": 32.76
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1551,7 +1551,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Highscore: 0",
+    "_string": "최고기록 : 0",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 38,
@@ -1561,8 +1561,8 @@
     "_overflow": 0,
     "_enableWrapText": true,
     "_font": {
-      "__uuid__": "65390837-3108-471e-819a-b0be70a7692f",
-      "__expectedType__": "cc.BitmapFont"
+      "__uuid__": "c0680d85-2f4f-4dcc-a8d2-6c637951d85a",
+      "__expectedType__": "cc.TTFFont"
     },
     "_isSystemFontUsed": false,
     "_spacingX": 1,
@@ -1631,7 +1631,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 93.842,
+      "y": 43.721,
       "z": 0
     },
     "_lrot": {
@@ -1747,7 +1747,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Play",
+    "_string": "게임 시작",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 56,
@@ -1757,8 +1757,8 @@
     "_overflow": 1,
     "_enableWrapText": false,
     "_font": {
-      "__uuid__": "65390837-3108-471e-819a-b0be70a7692f",
-      "__expectedType__": "cc.BitmapFont"
+      "__uuid__": "c0680d85-2f4f-4dcc-a8d2-6c637951d85a",
+      "__expectedType__": "cc.TTFFont"
     },
     "_isSystemFontUsed": false,
     "_spacingX": 1,
@@ -1982,7 +1982,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 8.459,
+      "y": -41.662,
       "z": 0
     },
     "_lrot": {
@@ -2098,7 +2098,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Upgrade",
+    "_string": "캐릭터 강화",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 56,
@@ -2108,8 +2108,8 @@
     "_overflow": 1,
     "_enableWrapText": false,
     "_font": {
-      "__uuid__": "65390837-3108-471e-819a-b0be70a7692f",
-      "__expectedType__": "cc.BitmapFont"
+      "__uuid__": "c0680d85-2f4f-4dcc-a8d2-6c637951d85a",
+      "__expectedType__": "cc.TTFFont"
     },
     "_isSystemFontUsed": false,
     "_spacingX": 1,
@@ -2459,7 +2459,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -54.851,
+      "y": -104.972,
       "z": 0
     },
     "_lrot": {
@@ -2619,7 +2619,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 9.003,
-      "y": -1.436,
+      "y": 7.878,
       "z": 0
     },
     "_lrot": {
@@ -2657,8 +2657,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 17.5,
-      "height": 30
+      "width": 17.6842041015625,
+      "height": 51.534
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2693,12 +2693,12 @@
     "_actualFontSize": 56,
     "_fontSize": 56,
     "_fontFamily": "Arial",
-    "_lineHeight": 30,
+    "_lineHeight": 40.9,
     "_overflow": 0,
     "_enableWrapText": true,
     "_font": {
-      "__uuid__": "65390837-3108-471e-819a-b0be70a7692f",
-      "__expectedType__": "cc.BitmapFont"
+      "__uuid__": "c0680d85-2f4f-4dcc-a8d2-6c637951d85a",
+      "__expectedType__": "cc.TTFFont"
     },
     "_isSystemFontUsed": false,
     "_spacingX": 1,
@@ -2789,7 +2789,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -212.288,
+      "y": -233.769,
       "z": 0
     },
     "_lrot": {
@@ -2837,7 +2837,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 1.381,
       "z": 0
     },
     "_lrot": {
@@ -2905,18 +2905,18 @@
       "b": 255,
       "a": 255
     },
-    "_string": "Audio Settings",
+    "_string": "오디오 설정",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 38,
-    "_fontSize": 38,
+    "_actualFontSize": 56,
+    "_fontSize": 56,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
     "_overflow": 1,
     "_enableWrapText": false,
     "_font": {
-      "__uuid__": "65390837-3108-471e-819a-b0be70a7692f",
-      "__expectedType__": "cc.BitmapFont"
+      "__uuid__": "c0680d85-2f4f-4dcc-a8d2-6c637951d85a",
+      "__expectedType__": "cc.TTFFont"
     },
     "_isSystemFontUsed": false,
     "_spacingX": 1,
@@ -2963,7 +2963,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 130,
-      "height": 24
+      "height": 32.5
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3114,8 +3114,8 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 680,
-      "height": 510.0000000000001
+      "width": 510,
+      "height": 680
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
