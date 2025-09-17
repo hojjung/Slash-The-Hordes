@@ -66,9 +66,26 @@ export class ItemManager extends Component {
         this.pickupEffectManager.showEffect(item.node.worldPosition);
         this.itemTypeToAction.get(item.ItemType)();
         this.pickupEvent.trigger(item.ItemType);
-
+        this.vibrate(item.ItemType);
         item.pickup();
     }
+
+    private vibrate(itemType: ItemType): void {
+    // 브라우저 지원 확인
+    if (!window.navigator.vibrate) return;
+    
+    // 아이템 타입별 진동 패턴
+    switch(itemType) {
+        case ItemType.XP:
+            // 짧은 진동 10ms
+            window.navigator.vibrate(10);
+            break;
+        case ItemType.Chest:
+            // 중간 진동 30ms
+            window.navigator.vibrate(30);
+            break;
+    }
+}
 
     private addXP(): void {
         this.player.Level.addXp(1);

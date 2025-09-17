@@ -82,7 +82,7 @@ export class Game extends Component {
     public async play(userData: UserData, settings: GameSettings, translationData: TranslationData, testValues?: TestValues): Promise<GameResult> {
         await this.setup(userData, settings, translationData, testValues);
 
-        AppRoot.Instance.Analytics.gameStart();
+        //AppRoot.Instance.Analytics.gameStart();
 
         this.gamePauser.resume();
         this.blackScreen.active = false;
