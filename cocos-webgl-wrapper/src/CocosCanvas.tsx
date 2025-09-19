@@ -1,4 +1,13 @@
+// src/CocosCanvas.tsx
 import { useEffect } from "react";
+
+// 타입 선언
+declare global {
+    interface Window {
+        _CCSettings: any;
+        System: any;
+    }
+}
 
 const CocosCanvas = () => {
     useEffect(() => {
@@ -25,7 +34,6 @@ const CocosCanvas = () => {
             await loadScript("/src/polyfills.bundle.js");
             await loadScript("/src/system.bundle.js");
 
-            // import-map 이제 경로 수정 필요없음
             const importMapScript = document.createElement("script");
             importMapScript.src = "/src/import-map.json";
             importMapScript.type = "systemjs-importmap";
@@ -34,11 +42,12 @@ const CocosCanvas = () => {
             await new Promise((resolve) => setTimeout(resolve, 100));
 
             if (window.System) {
-                System.import("./index.js").catch(console.error);
+                (window as any).System.import("./index.js").catch(console.error);
             }
         };
 
-        function loadScript(src) {
+        function loadScript(src: string) {
+            // 타입 추가
             return new Promise((resolve, reject) => {
                 const script = document.createElement("script");
                 script.src = src;
