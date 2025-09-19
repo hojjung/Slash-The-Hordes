@@ -1,0 +1,11 @@
+{
+  "appKey": "horde-survival",
+  "appName": "Horde Survival",
+  "appVersion": "1.0.0",
+  "appScheme": "hordesurvival",
+  "server": {
+    "url": "index.html"
+  },
+  "permissions": [],
+  "minTossAppVersion": "4.0.0"
+}
