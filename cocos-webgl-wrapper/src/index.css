@@ -1,68 +1,96 @@
+/* ===== Base ===== */
 :root {
+  /* 색상 변수 */
+  --bg:#ffffff;
+  --fg:#213547;
+  --surface:#f7f7f9;
+  --on-surface:#111111;
+  --border:#e5e7eb;
+  --nav-bg:#ffffffee;
+
+  /* 기존 vite 텍스트 설정 유지 */
+  color-scheme: light dark;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:#0b0c0f;
+    --fg:#e5e7eb;
+    --surface:#111318;
+    --on-surface:#e5e7eb;
+    --border:#2a2e37;
+    --nav-bg:#0b0c0fe6;
+  }
 }
 
+/* 전역 배경/글자색 */
+html, body, #root {
+  background: var(--bg);
+  color: var(--fg);
+  height: 100%;
+}
+
+/* Vite 기본 a/button 스타일은 유지 */
+a { font-weight: 500; color: #646cff; text-decoration: inherit; }
+a:hover { color: #535bf2; }
+button {
+  border-radius: 8px; border: 1px solid transparent;
+  padding: 0.6em 1.2em; font-size: 1em; font-weight: 500; font-family: inherit;
+  background-color: #f9f9f9; cursor: pointer; transition: border-color .25s;
+}
+button:hover { border-color: #646cff; }
+button:focus, button:focus-visible { outline: 4px auto -webkit-focus-ring-color; }
+
+@media (prefers-color-scheme: dark) {
+  a:hover { color: #747bff; }
+  button { background-color: #1a1a1a; }
+}
+
+/* ===== 레이아웃 교정 ===== */
+/* 기존 중앙정렬(캔버스 깨짐) 제거 */
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  display: block;       /* 중요: flex/center 제거 */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* ===== Toss NavBar ===== */
+.navbar {
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+/* ===== 이용등급 배지 (3초 표시) ===== */
+.rating-badge {
+  position: fixed; top: 8px; right: 8px; z-index: 9999;
+  padding: 8px 10px; border-radius: 8px;
+  background: var(--surface); color: var(--on-surface);
+  border: 1px solid var(--border);
+  font-weight: 700; display: inline-flex; gap: 6px; align-items: center;
+  pointer-events: none; /* 게임 입력 방해 방지 */
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.rating-badge img {
+  width: 20px; height: 20px; object-fit: contain;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* ===== 종료 확인 모달 ===== */
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,.45);
+  display: grid; place-items: center; z-index: 10000;
 }
+.modal-sheet {
+  background: var(--surface); color: var(--on-surface);
+  width: 320px; border-radius: 12px; border: 1px solid var(--border); padding: 16px;
+}
+
+/* ===== Cocos 캔버스 배경도 테마에 맞춤(중복 안전) ===== */
+#GameDiv, #Cocos3dGameContainer, #GameCanvas { background: var(--bg) !important; }

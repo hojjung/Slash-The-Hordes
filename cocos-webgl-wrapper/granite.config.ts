@@ -1,21 +1,25 @@
+// granite.config.ts
 import { defineConfig } from "@apps-in-toss/web-framework/config";
 
 export default defineConfig({
-    appName: "horde-survival",
-    brand: {
-        displayName: "horde-survival", // 화면에 노출될 앱의 한글 이름으로 바꿔주세요.
-        primaryColor: "#3182F6", // 화면에 노출될 앱의 기본 색상으로 바꿔주세요.
-        icon: "/icon.png", // 화면에 노출될 앱의 아이콘 이미지 주소로 바꿔주세요.
-        bridgeColorMode: "basic"
-    },
-    web: {
-        host: "localhost",
-        port: 5173,
-        commands: {
-            dev: "vite",
-            build: "tsc -b && vite build"
-        }
-    },
-    permissions: [],
-    outdir: "dist"
+  appName: "호드 서바이벌",
+  brand: {
+    displayName: "호드 서바이벌",
+    primaryColor: "#3182F6",
+    icon: "/icon.png",
+    bridgeColorMode: "basic",
+  },
+  navigationBar: {
+    withBackButton: true,
+    withHomeButton: true,
+    // 필요하면 초기 액세서리 버튼 1개:
+    // initialAccessoryButton: { id: "mypage", title: "마이", icon: { name: "icon-user-mono" } },
+  },
+  web: {
+    host: "localhost",
+    port: 5173,
+    commands: { dev: "vite", build: "tsc -b && vite build" },
+  },
+  permissions: [],
+  outdir: "dist",
 });
