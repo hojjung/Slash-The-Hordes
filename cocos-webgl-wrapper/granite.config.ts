@@ -2,7 +2,7 @@
 import { defineConfig } from "@apps-in-toss/web-framework/config";
 
 export default defineConfig({
-  appName: "호드 서바이벌",
+  appName: "horde-survival",
   brand: {
     displayName: "호드 서바이벌",
     primaryColor: "#3182F6",
