@@ -47,7 +47,8 @@
     "designResolution": {
       "width": 510,
       "height": 680,
-      "fitHeight": true
+      "fitHeight": true,
+      "fitWidth": false
     }
   },
   "__version__": "1.0.6",
