@@ -1,14 +1,26 @@
+<!-- /index.html (루트에 있는 Vite용) -->
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'none';" />
-        <title>Vite + React + TS</title>
-    </head>
-    <body>
-        <div id="root"></div>
-        <script type="module" src="/src/main.tsx"></script>
-    </body>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'none';" />
+    
+    <!-- iOS 스와이프 백 제스처 방지 -->
+    <style>
+        body {
+            overscroll-behavior-x: contain;
+            -webkit-user-select: none;
+            user-select: none;
+            touch-action: pan-y;
+        }
+    </style>
+    
+    <title>호드 서바이벌</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>

@@ -6,14 +6,15 @@ export default defineConfig({
   brand: {
     displayName: "호드 서바이벌",
     primaryColor: "#3182F6",
-    icon: "/icon.png",
-    bridgeColorMode: "basic",
+    icon: "https://hojjung.github.io/SlashHordeIcon/icon.png?v=20250925",
+    bridgeColorMode: "inverted",
   },
   navigationBar: {
     withBackButton: true,
-    withHomeButton: true,
-    // 필요하면 초기 액세서리 버튼 1개:
-    // initialAccessoryButton: { id: "mypage", title: "마이", icon: { name: "icon-user-mono" } },
+    withHomeButton: false,
+  },
+  webViewProps: {
+    type: "game",  // 추가 - 게임 타입 명시
   },
   web: {
     host: "localhost",

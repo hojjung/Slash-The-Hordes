@@ -71,7 +71,7 @@ body {
 
 /* ===== 이용등급 배지 (3초 표시) ===== */
 .rating-badge {
-  position: fixed; top: 8px; right: 8px; z-index: 9999;
+  position: fixed; top: 120px; right: 8px; z-index: 9999;
   padding: 8px 10px; border-radius: 8px;
   background: var(--surface); color: var(--on-surface);
   border: 1px solid var(--border);
